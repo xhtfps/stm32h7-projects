@@ -1,0 +1,168 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, a, LIC=SDA0P-MVGRV-12VLE-5EBKW-2QW6X-VA0U6
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+d:\STM32_project\C-3 高分辨率谐波检测装置\软件\谐波测量（结项）\MDK-ARM\FK743M1.uvprojx
+Project File Date:  07/26/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\keil5\ARM\ARMCC\Bin'
+Build target 'FK743M1'
+assembling startup_stm32h743xx.s...
+compiling lcd_fonts.c...
+compiling lcd_image.c...
+compiling stm32h7xx_it.c...
+compiling sdram.c...
+compiling led.c...
+compiling FFT.c...
+compiling lcd_test.c...
+compiling AD7606.c...
+AD7606.h(9): warning:  #1295-D: Deprecated declaration AD7606_SPI_DMA_Init - give arg types
+  void AD7606_SPI_DMA_Init();
+AD7606.h(10): warning:  #1295-D: Deprecated declaration AD7606_DMA_Read - give arg types
+  void AD7606_DMA_Read();
+AD7606.h(11): warning:  #1295-D: Deprecated declaration DispOnce - give arg types
+  void DispOnce();
+AD7606.h(12): warning:  #1295-D: Deprecated declaration DispChall - give arg types
+  void DispChall();
+AD7606.c(24): warning:  #223-D: function "printf" declared implicitly
+  		printf("ch[%d] :%f\r\n",i%8,AD7606_Buffer[0][i]* 10.0 / 32767);
+AD7606.c(31): warning:  #223-D: function "printf" declared implicitly
+  	printf("------------\r\n");
+AD7606.c(211): warning:  #223-D: function "printf" declared implicitly
+  		printf( "Pre:%d Psc:%d Fre:%f\r\n",usPrescaler+1,usPeriod+1,SystemCoreClock/2.0/(usPrescaler+1)/(usPeriod + 1) );
+AD7606.c(376): warning:  #223-D: function "printf" declared implicitly
+  						printf("传输完成\r\n");
+AD7606.c(387): warning:  #1-D: last line of file ends without a newline
+  }
+AD7606.c: 9 warnings, 0 errors
+compiling stm32h7xx_hal_rcc_ex.c...
+compiling stm32h7xx_hal_msp.c...
+compiling stm32h7xx_hal_sdram.c...
+compiling stm32h7xx_hal_exti.c...
+compiling stm32h7xx_hal_flash.c...
+compiling User_UI.c...
+compiling usart.c...
+compiling stm32h7xx_hal.c...
+compiling stm32h7xx_hal_gpio.c...
+compiling stm32h7xx_hal_cortex.c...
+compiling stm32h7xx_hal_pwr_ex.c...
+compiling stm32h7xx_hal_mdma.c...
+compiling stm32h7xx_hal_dma2d.c...
+compiling stm32h7xx_hal_flash_ex.c...
+compiling stm32h7xx_hal_pwr.c...
+compiling BSP_4x4KEY.c...
+compiling stm32h7xx_hal_i2c_ex.c...
+compiling lcd_pwm.c...
+compiling stm32h7xx_hal_dma_ex.c...
+compiling stm32h7xx_ll_fmc.c...
+compiling lcd_rgb.c...
+compiling stm32h7xx_hal_hsem.c...
+compiling stm32h7xx_hal_rcc.c...
+compiling main.c...
+..\MDK-ARM\AD7606.h(9): warning:  #1295-D: Deprecated declaration AD7606_SPI_DMA_Init - give arg types
+  void AD7606_SPI_DMA_Init();
+..\MDK-ARM\AD7606.h(10): warning:  #1295-D: Deprecated declaration AD7606_DMA_Read - give arg types
+  void AD7606_DMA_Read();
+..\MDK-ARM\AD7606.h(11): warning:  #1295-D: Deprecated declaration DispOnce - give arg types
+  void DispOnce();
+..\MDK-ARM\AD7606.h(12): warning:  #1295-D: Deprecated declaration DispChall - give arg types
+  void DispChall();
+../Core/Src/main.c(40): warning:  #1295-D: Deprecated declaration draw_wave - give arg types
+  void draw_wave();    //绘制波形
+../Core/Src/main.c(41): warning:  #1295-D: Deprecated declaration clean_wave - give arg types
+  void clean_wave();   //清除上一次的波形
+../Core/Src/main.c(207): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              if(FFT_Mag[i]>Vpp_X && FFT_Mag[i]<Vpp_J&&FFT_Mag[i]<0.5&&i*Fs*1.0f/MAX_FFT_N>75)
+../Core/Src/main.c(124): warning:  #177-D: variable "vpp_max"  was declared but never referenced
+      float Fs=256000,vpp_max=0,Fre=1000,XLY=0;
+../Core/Src/main.c(124): warning:  #177-D: variable "Fre"  was declared but never referenced
+      float Fs=256000,vpp_max=0,Fre=1000,XLY=0;
+../Core/Src/main.c(127): warning:  #550-D: variable "Fbl"  was set but never used
+      float Fbl=0;
+../Core/Src/main.c(128): warning:  #550-D: variable "xx1"  was set but never used
+      float  xx1,xx2;
+../Core/Src/main.c(128): warning:  #177-D: variable "xx2"  was declared but never referenced
+      float  xx1,xx2;
+../Core/Src/main.c(129): warning:  #177-D: variable "Fre_Point"  was declared but never referenced
+      uint32_t Fre_Point_J=0,Fre_Point_X=0,Fre_Point;
+../Core/Src/main.c(391): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          xxx=0.5/Vpp_X;
+../Core/Src/main.c(442): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          xxj = 5.0/Vpp_J;
+../Core/Src/main.c(299): warning:  #177-D: variable "vpp_max"  was declared but never referenced
+      float Fs=256000,vpp_max=0,Fre=1000,XLY=0;
+../Core/Src/main.c(299): warning:  #177-D: variable "Fre"  was declared but never referenced
+      float Fs=256000,vpp_max=0,Fre=1000,XLY=0;
+../Core/Src/main.c(299): warning:  #177-D: variable "XLY"  was declared but never referenced
+      float Fs=256000,vpp_max=0,Fre=1000,XLY=0;
+../Core/Src/main.c(303): warning:  #177-D: variable "xx1"  was declared but never referenced
+      float  xx1,xx2;
+../Core/Src/main.c(303): warning:  #177-D: variable "xx2"  was declared but never referenced
+      float  xx1,xx2;
+../Core/Src/main.c(304): warning:  #177-D: variable "Fre_Point"  was declared but never referenced
+      uint32_t Fre_Point_J=0,Fre_Point_X=0,Fre_Point;
+../Core/Src/main.c(475): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              y1 = 250-FFT_Buff[i].real*1.0/10*300/(vpp/10);
+../Core/Src/main.c(476): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              y2 = 250-FFT_Buff[i+1].real*1.0/10*300/(vpp/10);
+../Core/Src/main.c: 23 warnings, 0 errors
+compiling stm32h7xx_hal_i2c.c...
+compiling stm32h7xx_hal_dma.c...
+compiling stm32h7xx_hal_ltdc_ex.c...
+compiling stm32h7xx_hal_ltdc.c...
+compiling stm32h7xx_hal_uart_ex.c...
+compiling stm32h7xx_hal_tim_ex.c...
+compiling stm32h7xx_hal_spi.c...
+compiling stm32h7xx_hal_spi_ex.c...
+compiling system_stm32h7xx.c...
+compiling stm32h7xx_hal_uart.c...
+compiling stm32h7xx_hal_tim.c...
+linking...
+Program Size: Code=35232 RO-data=37720 RW-data=168 ZI-data=2099024  
+FromELF: creating hex file...
+"FK743M1\FK743M1.axf" - 0 Error(s), 32 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32H7xx_DFP.4.1.3.pack
+                Keil.STM32H7xx_DFP.4.1.3
+                STMicroelectronics STM32H7 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_FK743M1
+  D:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Build Time Elapsed:  00:00:18
+</pre>
+</body>
+</html>
