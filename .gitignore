@@ -37,3 +37,13 @@ Thumbs.db
 *.ckpt
 *.onnx
 *.h5
+
+# ---- Keil / J-Link 生成物（统一规范）----
+*.uvguix.*
+*.uvoptx
+JLinkLog.txt
+JLinkSettings.ini
+keil_build.log
+Output/
+Objects/
+Listings/
